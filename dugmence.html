@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        background-color: orange;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>BUDZET FK RADJEVCA</h1>
+    <h2>Klikni vise puta ne budi stipsa</h2>
+    <p id="pare">0$</p><br>
+    <button id="btn">POVECAJ</button>
+
+    <script>
+        let button = document.getElementById("btn")
+        let money = document.getElementById("pare")
+        let novac = 0
+        button.addEventListener('click', function () {
+            novac += 100
+            pare.textContent = novac + '$'
+        if (novac > 200) {
+        alert("BICE PARA BICE KOPACAKA")
+        }
+    })
+    </script>
+    </div>
+</body>
+
+</html>

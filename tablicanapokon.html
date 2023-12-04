@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+    </style>
+    <h1 style="text-align: center;">VOZILA</h1>
+    <div class='container'>
+        <label for=inputauto>Automobil</label>
+        <input type="text" id="inputauto" />
+        <label for=inputmark>Marka</label>
+        <input type="text" id="inputmark" />
+        <label for="inputprice">Cena</label>
+        <input type="text" id="inputprice" />
+        <button id="add">SNIMI</button>
+    </div>
+    <table id="table">
+        <tr>
+            <th>Automobil</th>
+            <th>Marka</th>
+            <th>Cena</th>
+        </tr>
+        <tr>
+            <td>Audi</td>
+            <td>A6</td>
+            <td>5 000</td>
+        </tr>
+    </table>
+</body>
+ 
+<script>
+    let auto = document.getElementById("inputauto")
+    let mark = document.getElementById("inputmark")
+    let cena = document.getElementById("inputprice")
+    let table = document.getElementById("table")
+    let dugme = document.getElementById("add")
+    dugme.addEventListener("click", function() {
+        if(auto.value == ""){
+            alert("Popuni sva polja")
+        }else if (mark.value ==''){
+            alert("Popuni sva polja")
+        }else if(cena.value == ''){
+            alert('Popuni sva polja')
+        }else {
+            let row = document.createElement("tr")
+            let td1 = document.createElement("td")
+            let td2 = document.createElement("td")
+            let td3 = document.createElement("td")
+            td1.innerHTML = auto.value
+            td2.innerHTML = mark.value
+            td3.innerHTML = cena.value
+        
+            row.appendChild(td1)
+            row.appendChild(td2)
+            row.appendChild(td3)
+            table.appendChild(row)
+            auto.value = ''
+            mark.value = ''
+            cena.value = ''
+        }
+    })
+</script>
+ 
+</html>
